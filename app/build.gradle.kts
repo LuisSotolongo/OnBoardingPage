@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.onboardingpage"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.onboardingpage"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

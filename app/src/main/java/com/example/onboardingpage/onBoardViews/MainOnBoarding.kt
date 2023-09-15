@@ -4,6 +4,7 @@ package com.example.onboardingpage.onBoardViews
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -13,7 +14,7 @@ import com.example.onboardingpage.data.PageData
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.rememberPagerState
 
-@OptIn(ExperimentalFoundationApi::class, ExperimentalPagerApi::class)
+@OptIn(ExperimentalPagerApi::class)
 @Composable
 fun MainOnBoarding() {
     val items = ArrayList<PageData>()
@@ -51,6 +52,7 @@ fun MainOnBoarding() {
         pagerState = pagerState,
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color.White)
+            .fillMaxHeight()
+            .background(Color.Blue)
     )
 }

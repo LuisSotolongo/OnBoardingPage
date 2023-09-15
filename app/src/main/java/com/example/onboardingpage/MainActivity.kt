@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.onboardingpage.navigation.NavManager
 import com.example.onboardingpage.onBoardViews.MainOnBoarding
 import com.example.onboardingpage.ui.theme.OnBoardingPageTheme
 
@@ -23,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                   MainOnBoarding()
+                   NavManager()
                 }
             }
         }
