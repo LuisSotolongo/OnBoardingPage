@@ -24,7 +24,7 @@ class StoreBoarding(private val context: Context) {
 
     suspend fun saveBoarding(value: Boolean){
         context.dataStore.edit { preference ->
-            preference[STORE_BOARD] ?: false
+            preference[STORE_BOARD] = value
         }
     }
 }

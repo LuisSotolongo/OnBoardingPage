@@ -12,12 +12,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
 import com.example.onboardingpage.R
 import com.example.onboardingpage.data.PageData
+import com.example.onboardingpage.dataStore.StoreBoarding
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.rememberPagerState
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable
-fun MainOnBoarding(navController: NavController) {
+fun MainOnBoarding(navController: NavController, store: StoreBoarding) {
     val items = ArrayList<PageData>()
 
     items.add(
@@ -55,6 +56,7 @@ fun MainOnBoarding(navController: NavController) {
             .fillMaxWidth()
             .fillMaxHeight()
             .background(Color.White),
-        navController = navController
+        navController = navController,
+        store
     )
 }
