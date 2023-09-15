@@ -17,7 +17,8 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun PagerIndicator(size: Int, currentPage: Int){
-    Row(horizontalArrangement = Arrangement.SpaceBetween,
+    Row(
+        horizontalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier.padding(top = 60.dp)
     ) {
         repeat(size){

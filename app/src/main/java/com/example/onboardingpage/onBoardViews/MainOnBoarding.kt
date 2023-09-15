@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.navigation.NavController
 import com.example.onboardingpage.R
 import com.example.onboardingpage.data.PageData
 import com.google.accompanist.pager.ExperimentalPagerApi
@@ -16,7 +17,7 @@ import com.google.accompanist.pager.rememberPagerState
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable
-fun MainOnBoarding() {
+fun MainOnBoarding(navController: NavController) {
     val items = ArrayList<PageData>()
 
     items.add(
@@ -53,6 +54,7 @@ fun MainOnBoarding() {
         modifier = Modifier
             .fillMaxWidth()
             .fillMaxHeight()
-            .background(Color.Blue)
+            .background(Color.White),
+        navController = navController
     )
 }

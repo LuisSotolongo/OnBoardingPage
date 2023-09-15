@@ -10,12 +10,12 @@ import com.example.onboardingpage.views.HomeView
 @Composable
 fun NavManager(){
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = "onBoarding",){
-        composable("onBoarding"){
-            MainOnBoarding()
+    NavHost(navController = navController, startDestination = "OnBoarding",){
+        composable("OnBoarding"){
+            MainOnBoarding(navController)
         }
         composable("Home"){
-            HomeView()
+            HomeView(navController)
         }
     }
 }

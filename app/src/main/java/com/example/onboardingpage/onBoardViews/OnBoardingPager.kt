@@ -15,6 +15,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.onboardingpage.data.PageData
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
@@ -25,9 +26,10 @@ import com.google.accompanist.pager.PagerState
 fun OnBoardingPager(
     item: List<PageData>,
     pagerState: PagerState,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    navController: NavController,
 ) {
-    Box(modifier = Modifier) {
+    Box(modifier = modifier) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             HorizontalPager(state = pagerState) { page ->
                 //centro de todo
@@ -42,7 +44,7 @@ fun OnBoardingPager(
                             .size(200.dp)
                             .fillMaxWidth()
                             .align(alignment = Alignment.CenterHorizontally),
-                        image = item[page].image
+                        item[page].image
                     )
                     Text(
                         text = item[page].title,
@@ -64,7 +66,7 @@ fun OnBoardingPager(
             PagerIndicator(size = item.size, currentPage = pagerState.currentPage)
         }
         Box(modifier = Modifier.align(Alignment.BottomCenter)) {
-            ButtonFinish(currentPage = pagerState.currentPage)
+            ButtonFinish(currentPage = pagerState.currentPage, navController)
         }
     }
 

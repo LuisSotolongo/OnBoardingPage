@@ -15,7 +15,7 @@ fun LoaderData(modifier: Modifier, image: Int){
     LottieAnimation(
         composition = composition,
         iterations  = LottieConstants.IterateForever,
-        modifier = Modifier
+        modifier = modifier
         )
 
 }
